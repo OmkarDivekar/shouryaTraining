@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate HRA PF DA</title>
+    <script>
+        var bsal=parseInt (prompt("Enter basic salary : ",25000));
+       
+        function calculate(bsal)
+        {
+           
+
+           var hra=(0.15*bsal);
+           var pf=(0.07*bsal);
+           var da=(0.20*bsal);
+            
+            netsal=( (bsal)+ parseInt(hra) +parseInt(pf)+parseInt(da));
+    
+           document.write("hra : "+hra);
+           document.write("<br>");
+           document.write("pf : "+pf);
+           document.write("<br>");
+           document.write("da : "+da);
+           document.write("<br>");
+            
+           document.write("Net Salary : "+netsal);
+
+
+
+        }
+        calculate(bsal);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

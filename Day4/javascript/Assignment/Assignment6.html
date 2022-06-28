@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To calculate Percentage</title>
+    <script>
+        // var s1=parseInt(prompt("Enter marks of subject1 :"));
+        // var s2=parseInt(prompt("Enter marks of subject2 :"));
+        // var s3=parseInt(prompt("Enter marks of subject3 :"));
+        // var s4=parseInt(prompt("Enter marks of subject4 :"));
+        // var s5=parseInt(prompt("Enter marks of subject5 :"));
+        
+        function cal(s1,s2,s3,s4,s5)
+        {
+            var total=80;
+            var sum=(s1+s2+s3+s4+s5);
+            var avg=sum/total;
+            var per=(sum/total)*100;
+             document.write("Avergare marks : "+avg);
+             document.write("<br>");
+             document.write("Percentage : "+per);
+             document.write("<br>");
+
+             if(per<60)
+             {
+              document.write("Grade : F");
+             }
+             else if(per<70)
+             {
+             document.write("Grade : D");
+             }
+             else if(per<80)
+             {
+               document.write("Grade : C");
+             }
+             else if(per<90)
+             {
+              document.write("Grade : B");
+             }
+            else if(per<100)
+             {
+             document.write("Grade : A");
+             }
+
+        }
+        cal(5,30,10,7,10);
+       // cal(s1,s2,s3,s4,s4,s5);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

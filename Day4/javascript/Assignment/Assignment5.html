@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max digit from given number</title>
+    <script>
+        function maxDig(n)
+        {
+            var n=parseInt(document.getElementById("N").value);
+            var max= 0;
+            while(n)
+            {
+                var rem=n%10;
+                max=Math.max(rem,max);
+                n=parseInt(n/10);
+            }
+            document.getElementById("Result").value=max;
+        }
+        maxDig(n);
+
+    </script>
+</head>
+<body>
+    <p>Enter the number : <input id="N"></p>
+    <button onclick="maxDig()">Max digit from a number</button>
+    <p>Result = <input id="Result"</p>
+</body>
+</html>
