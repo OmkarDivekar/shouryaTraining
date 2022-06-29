@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+</head>
+<body>
+   
+     <label> choose : </label>
+     <select onchange="Display(event)">
+        <option>select</option>
+        <option>Front End Languages</option>
+        <option>Back End Languages</option>
+     </select><br><br>
+     <p id="result"></p>
+   
+
+   
+</body>
+</html>`
+<!-- <script>
+    function Display(event)
+    {
+        let val1=document.getElementById("FE");
+        let val2=document.getElementById("BE");
+        let arrData1=["HTML","CSS","JavaScript","Angular","React Js"];
+       // let arrData1=["HTML","CSS","JavaScript","Angular","React Js"];
+
+        for(let i=0;i<arrData1.length;i++)
+        {
+            if(val1)
+            {
+                console.log(arrData1[i]);
+            }
+            
+        }
+    }
+</script> -->
+<script>
+    function Display(event)
+    {
+        console.log("select",event.target.value);
+        if(event.target.value==="Front End Languages")
+        {
+            document.getElementById("result").innerHTML="HTML,CSS,JavaScript";
+        }
+        else if (event.target.value==="Back End Languages")
+        {
+            document.getElementById("result").innerHTML="Java,Python,PHP";
+
+        }
+        else 
+        {
+            document.getElementById("result").innerHTML="Please select language";
+
+        }
+    }
+</script>

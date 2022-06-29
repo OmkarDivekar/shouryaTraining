@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h5> Product Amount : 5</h5>
+        <ul style="list-style-type: decimal;">
+            <li>6000</li>
+            <li>2000</li>
+            <li>4000</li>
+            <li>1000</li>
+            <li>2000</li>
+
+        </ul>
+        <ul style="list-style: none;">Sum : 15000</ul>
+    </div>
+</body>
+
+</html>
+<script>
+    async function Add() {
+        console.log("Start");
+        let Prom1 = new Promise((Resolve, Reject) => {
+            let arrData = [6000, 2000, 4000, 1000, 2000];
+            var s = 0;
+            for (let i = 0; i < arrData.length; i++) {
+                s = s + arrData[i];
+            }
+            console.log("Sum : ", s);
+            //document.write("Sum : ",s);
+            setTimeout(() => {
+                Resolve("My Promise 1 resolved");
+
+
+                console.log("Amount after Adding tax 10% : ", tax);
+                console.log("Deducting discount 5% = ", disc);
+
+
+
+
+            }, 3000)
+
+
+            let tax = s + s * 0.1;
+            //console.log("Amount after Adding tax 10% : ", tax);
+            //document.write("Amount after Adding tax 10% : ", tax);
+
+            let disc = (tax * 0.05);
+            //  console.log("Deducting discount 5% = ",disc);
+            //document.write("Deducting discount 5% = ",disc);
+
+            setTimeout(() => {
+                Resolve("My Promise 1 resolved");
+                let final = tax - (tax * 0.05);
+                console.log("Final Amount : ", final);
+                // document.write("Final Amount : ", final);
+
+
+            }, 6000)
+
+        })
+    }
+    Add();
+</script>

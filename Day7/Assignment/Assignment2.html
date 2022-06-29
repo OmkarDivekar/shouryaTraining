@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body style="text-align:center ;">
+    <h2>Check count</h2><br>
+   <div>
+      <label><h6>Words : </h6> </label>
+      <input type="text" id="inputArea"/>
+   </div><br><br>
+   <p>Result : <span id="display">0</span></p><br>
+   <button class="btn btn-success" onclick="countWords()"> Check Count</button>
+</body>
+</html>
+<script>
+    function countWords()
+    {
+       var text=document.getElementById("inputArea").value;
+
+       var num=0;
+       for(var i=0;i<text.length;i++)
+       {
+        var initialChar = text[i];
+        if(initialChar===",")
+        {
+            num = num + 1;
+        }
+       }
+      
+       num = num + 1;
+       document.getElementById("display").innerHTML = num;
+    }
+</script>
