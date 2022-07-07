@@ -1,0 +1,17 @@
+<div class="container" style="text-align:center;">
+  <h5 style="background-color: rgb(238, 194, 247);">Assignment 2</h5><br>
+  <div class="form-group">
+       <label class="font-weight-bold">Enter a Number:</label>
+       <input type="text" class="form-control" [(ngModel)]="num"/>
+  </div>
+  <div [ngSwitch]="num">
+       <p class="font-weight-bold" *ngSwitchCase="100">You Pressed : One Hundred</p>
+       <p class="font-weight-bold" *ngSwitchCase="101">You Pressed : One Hundred One</p>
+       <p class="font-weight-bold" *ngSwitchCase="102">You Pressed : One Hundred Two </p>
+       <p class="font-weight-bold" *ngSwitchCase="103">You Pressed : One Hundred Three</p>
+       <p class="font-weight-bold" *ngSwitchCase="104">You Pressed : One Hundred Four</p>
+       <p class="font-weight-bold" *ngSwitchCase="105">You Pressed : One Hundred Five</p>
+       <p class="font-weight-bold" *ngSwitchDefault>Please Enter Value Between 100 to 105</p>
+       
+  </div>
+</div>
