@@ -1,0 +1,26 @@
+<div class="container" style="text-align: center;">
+    <h5 class=" text-dark" style="background-color: rgb(245, 196, 238);">Assignment 2</h5>
+    <h5>Employee Leave form</h5><br>
+    
+    <div clas="form-group">
+      <label>Employee Code:</label>
+      <input type="text" class="form-control" [(ngModel)]="employeecode"/>
+      <span class="alert-warning" *ngIf="employeecode?.length>4 && employeecode.length<8">Employee Code must be in between 4 to 8 characters !!</span>
+      <span class="alert-danger" *ngIf="employeecode?.length>8">Invalid Code !!</span>
+
+    </div>
+    
+    <div class="form-group">
+        <label>Department :</label>
+        <input type="text" class="form-control" [(ngModel)]="department"/>
+        <span class="alert-danger" *ngIf="department?.length===0">Enter Department Name</span>
+    </div>
+
+    <div>
+        <button class="btn btn-success">Send</button>
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,24 @@
+<div class="container" style="text-align: center;">
+    <h5 style="background-color: rgb(245, 196, 238)">Assignment 1</h5>
+    <div >
+        
+        <div>
+          <h4 class="text-center">Contact Form</h4>
+          <div class="form-group">
+            <label for="fname">First Name :</label>
+            <input type="text" #fname class="form-control" placeholder="Enter First Name..."/><br>
+            <h6> First name length : <span>{{ firstName?.value?.length }}</span></h6>
+            <label for="lname" class="mt-4">Last Name :</label>
+            <input type="text" #lname class="form-control" placeholder="Enter Last Name..."/><br>
+            <h6>Last name length : <span>{{ lastName?.value?.length }}</span></h6>
+          </div>
+          <div class="mt-4">
+            <button class="btn btn-sm btn-success" (click)="onSubmit(fname, lname)">Submit</button>
+          </div>
+        </div>
+        
+    </div>
+
+    
+
+</div>
