@@ -1,0 +1,21 @@
+<div class="container" style="text-align: center;">
+    <h5 style="background-color: rgb(245, 196, 238)">Assignment 4</h5><br><br>
+    <div>
+        <ul style="list-style-type:none">
+            
+                <!-- <span *ngIf="data.id1 ===10" class="bg-success text-white">{{data.value1}}</span>
+                <span *ngIf="data.id2 ===20" class="bg-danger text-white">{{data.value2}}</span>
+                <span *ngIf="data.id3 ===30" class="bg-warning text-white">{{data.value3}}</span>
+                <span *ngIf="data.id4 ===40" class="bg-dark text-white">{{data.value4}}</span> -->
+                <li> <span [ngClass]="{'bg-success':arrData[0]===10}">{{arrData[0]}}</span></li>
+                <li><span [ngClass]="{'bg-danger':arrData[1]===20}">{{arrData[1]}}</span></li>
+                <li><span [ngClass]="{'bg-warning':arrData[2]===30}">{{arrData[2]}}</span></li>
+                <li><span [ngClass]="{'bg-dark text-white':arrData[3]===40}">{{arrData[3]}}</span></li>
+                
+                 
+                
+            
+        </ul>
+    </div>
+
+</div>
