@@ -1,0 +1,20 @@
+<div class="container" style="text-align:center;"><br><br>
+  
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of arrEmp">
+            <td>{{emp.userid}}</td>
+            <td>{{emp.username}}</td>
+            <td><span [ngClass]="{'badge badge-success':emp.status === 'A','badge badge-danger':emp.status === 'D', 'badge badge-warning':emp.status !=('A' || 'D')}"> {{emp.status | userstatus}} </span>  </td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
