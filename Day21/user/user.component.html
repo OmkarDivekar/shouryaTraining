@@ -1,0 +1,27 @@
+<br><h5>User Data : </h5>
+<div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <th>User Id</th>
+            <th>Display Name</th>
+            <th>User Status</th>
+            <th>Role Assigned</th>
+            <th></th>
+        </thead>
+       <tbody *ngFor="let user of UsersData">
+        <tr >
+            <td>{{user.userid}}</td>
+            <td>{{user.displayname}}</td>
+            <td>{{user.userstatus}}</td>
+            <td>{{user.roleassign}}</td>
+            <td><button class="btn btn-warning" (click)="onDetails(user.userid)">Details</button></td>
+        </tr>
+        <tr *ngIf="selectUserId === user.userid">
+            <td colspan="4">
+                <app-userlist [PropUser]="user"></app-userlist>
+            </td>
+        </tr>
+       </tbody>
+        
+    </table>
+</div>
