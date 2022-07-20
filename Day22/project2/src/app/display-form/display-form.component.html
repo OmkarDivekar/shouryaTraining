@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row mt-5">
+       <div class="col-4"></div>
+          <div class="col-4">
+             <form [formGroup]="frmClient" (ngSubmit)="onSubmit">
+                <h5 style="background-color: rgb(250, 249, 168);">*Reactive Form using Validations*</h5><hr>
+                <div class="form-group">
+                    <label  class="font-weight-bold">Client Id :</label>
+                    <input type="text" class="form-control" formControlName="clientid" placeholder="Enter your Id"/>
+                    <span class="alert-danger" *ngIf="frmClient.controls['clientid'].hasError('required')">Client Id Required !!!</span>
+                    <span class="alert-warning" *ngIf="frmClient.controls['clientid'].hasError('minlength')">Id Required 6 Character</span>
+                </div>
+                <div>
+                    <label  class="font-weight-bold">Client Name :</label>
+                    <input type="text" class="form-control" formControlName="clientname" placeholder="Enter your name"/>
+                    <span class="alert-danger" *ngIf="frmClient.controls['clientname'].hasError('required')">Client name required !!!</span>
+                    <span class="alert-warning" *ngIf="frmClient.controls['clientname'].hasError('minlength')">Name required minimum 3 characters</span>
+                    <span class="alert-warning" *ngIf="frmClient.controls['clientname'].hasError('maxlength')">Name can have max 20 characters</span>
+                </div>
+                <div>
+                    <label class="font-weight-bold">Address :</label>
+                    <input type="text" class="form-control" formControlName="address" placeholder="Enter your address"/>
+                    <span class="alert-danger" *ngIf="frmClient.controls['address'].hasError('required')">Address required !!!</span>
+                </div>
+                <div>
+                    <label class="font-weight-bold">Phone :</label>
+                    <input type="text" class="form-control" formControlName="phone" placeholder="+91"/>
+                    <span class="alert-danger" *ngIf="frmClient.controls['phone'].hasError('pattern')">Please Enter Digit only</span>
+                </div><br>
+                <hr>
+                <div>
+                    <button class="btn btn-success" type="Submit" (click)="onSubmit()">Submit</button>
+                </div><br><br>
+                <p  class="font-weight-bold">{{Result}}</p>
+             </form>
+          </div>
+        
+    </div>
+
+</div>

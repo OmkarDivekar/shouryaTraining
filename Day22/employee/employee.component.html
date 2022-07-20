@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-sm-6">
+        <h5>Employee Data</h5>
+         <div>
+           <table class="table table-striped">
+             <thead>
+               <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Designation</th>
+                <th></th>
+             </thead>
+              <tbody *ngFor="let emp of EmployeeData">
+                <tr>
+                  <td>{{emp.eid}}</td>
+                  <td>{{emp.ename}}</td>
+                  <td>{{emp.designation}}</td>
+                  <td><button class="btn btn-warning btn-sm" (click)="onDetails(emp)">Select</button></td>
+                </tr>
+                <!-- <tr *ngIf="selectedEmpId === emp.eid">
+                 
+                  <td colspan="4">
+                  <app-employee-det [PropEmp]="emp"></app-employee-det>
+                   </td>
+               </tr> -->
+               
+              </tbody>
+
+            </table>
+
+          </div>
+           
+        </div>
+        <div class="col-md-6">
+          <span colspan="6">
+            <app-employee-det [PropEmp]="selectedEmpId"></app-employee-det>
+          </span>
+         </div>
+     </div>
+</div>
+      
