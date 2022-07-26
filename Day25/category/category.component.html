@@ -1,0 +1,26 @@
+<hr>
+<div class="row">
+ <div class="col-6">
+     <div>
+        <table class=" table table-striped">
+            <thead>
+                <th>Brand</th>
+                <th>Status</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productData">
+                     <td>{{product.proname}}</td>
+                     <td>{{product.status}}</td>
+                      <!-- <td><a class="btn btn-primary" 
+                    [routerLink]="['/users/user/',users.userid, users.status]" [queryParams]="users">Select</a></td> -->
+                    <td><a class="btn btn-warning" [routerLink]="['/category/subcat/',product.productname, product.price]" [queryParams]="product">Select</a></td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+ </div>
+ <div class="col-6">
+    <router-outlet></router-outlet>
+</div>
+</div>

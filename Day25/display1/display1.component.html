@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6">
+            <div class="bg-success text-center text-white" >
+                <h4>Employee Info</h4>
+            </div>
+            <table class="table">
+                <th>EmpId</th>
+                <th>Employee Name</th>
+                <th>Designation</th>
+                <th>Status</th>
+                
+                <tr *ngFor="let emp of employeedata">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.employeename}}</td>
+                    <td>{{emp.designation}}</td>
+                    <td>{{emp.status}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-6" >
+            <div class="form-group">
+                <h4>Employee Name</h4>
+                <input type="text" class="form-control" [(ngModel)]="name"/>
+                {{name}}<br><hr>
+                <button class="btn btn-danger mt-2" (click)="onDelete(name)">Delete</button>
+            </div>
+           <div>{{empMsg}}</div>
+
+        </div>
+    </div>
+</div>

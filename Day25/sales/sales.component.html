@@ -1,0 +1,25 @@
+<br><br>
+<div class="row">
+    <div class="col-4"></div>
+   <div class="col-6">
+       <div>
+        <table class="table table-striped">
+             <thead>
+                <th>Sr_No</th>
+                <th>Product</th>
+                <th>Price</th>
+             </thead>
+             <tbody>
+                <tr *ngFor="let sale of salesData">
+                     <td>{{sale.sr_no}}</td>
+                     <td>{{sale.product}}</td>
+                     <td>{{sale.price}}</td>
+                </tr>
+             </tbody>
+        </table>
+       </div>
+   </div>
+   <div class="col-6">
+      <router-outlet></router-outlet>
+   </div>
+</div>

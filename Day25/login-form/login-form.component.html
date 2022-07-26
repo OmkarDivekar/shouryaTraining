@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+       <div class="col-6"><hr>
+          <h5>User List</h5>
+           <table class="table">
+               <thead>
+                   <th>User Id</th>
+                   <th>Password</th>
+                   <th>Status</th>
+                   
+               </thead>
+               <tbody>
+                   <tr *ngFor="let user of UserData">
+                       <td>{{user.id}}</td>
+                       <td>{{user.username}}</td>
+                       <td>{{user.status}}</td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+            <div class="col-6">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-4 m-3">
+                         <h5>Login Form</h5>
+                         <form [formGroup]="frmUser" (ngSubmit)="onSubmit()">
+                             <div class="form-group">
+                                 <label>User Id</label>
+                                 <input type="text" class="form-control" formControlName="userName" />
+                             </div>
+                             <div class="form-group">
+                                 <label>Password</label>
+                                 <input type="text" class="form-control" formControlName="password" />
+                             </div>
+                             <div class="form-group">
+                                <button class="btn btn-success">Submit</button>
+                             </div>
+                         </form>
+                         <div>
+                             <h4>{{Login}}</h4>
+                         </div>
+                     </div>
+             
+                 </div>
+             
+             </div>
+            </div>
+     </div>
+     
+ </div>
+ 
